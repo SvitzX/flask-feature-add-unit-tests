@@ -18,6 +18,10 @@ jobs:
         run: pip install pytest selenium flask-jwt-extended multiprocess flask-sqlalchemy
         shell: bash
 
-      - name: run pytest
-        run: pytest
+      - name: run pytest tests/test_integrations.py
+        run: pytest tests/test_integrations.py
+        shell: bash
+
+      - name: run pytest tests/test_unit.py
+        run: pytest tests/test_unit.py
         shell: bash
